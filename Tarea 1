@@ -1,0 +1,13 @@
+Sub principal()
+    neveras = InputBox("Inserte el numero de neveras")
+    cajones = neveras * 6
+    carne_congelada = cajones * 2
+    condimentos = carne_congelada * 3
+    Pi = 3.14159
+    
+    MsgBox "El número de neveras es " & neveras
+    MsgBox "El número total de cajones es " & cajones
+    MsgBox "El número total de carne congelada es " & carne_congelada
+    MsgBox "El número total de condimentos es " & condimentos
+    MsgBox "Pi= " & Pi
+End Sub
