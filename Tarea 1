@@ -1,8 +1,17 @@
+Option Explicit
 Sub principal()
+    Dim neveras As Long
+    Dim cajones As Long
+    Dim carne_congelada As Long
+    Dim condimentos As Long
+    
+    Dim Pi As Double
+    
     neveras = InputBox("Inserte el numero de neveras")
     cajones = neveras * 6
     carne_congelada = cajones * 2
     condimentos = carne_congelada * 3
+    
     Pi = 3.14159
     
     MsgBox "El número de neveras es " & neveras
