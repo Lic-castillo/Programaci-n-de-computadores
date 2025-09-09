@@ -1,0 +1,32 @@
+Option Explicit
+Sub principal()
+    Dim n As Long
+    Dim TermSig As Double
+    Dim suma As Double
+    Dim x As Double
+    
+    x = InputBox("Ingrese el valor de X")
+    
+    suma = 0
+    For n = 0 To 13 Step 1
+        TermSig = ((-1) ^ (n)) * ((x) ^ ((2 * n) + 1)) / (n + 1)
+        suma = suma + TermSig
+    Next n
+    
+    MsgBox "El total es= " & suma
+End Sub
+
+Option Explicit
+Sub principal()
+    Dim n As Double
+    Dim TermSig As Double
+    Dim producto As Long
+    
+     producto = 1
+     For n = 1 To 14 Step 1
+        TermSig = n
+        producto = producto * TermSig
+     Next n
+     
+     MsgBox "El producto total es: " & producto
+End Sub
