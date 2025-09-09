@@ -1,13 +1,14 @@
 Option Explicit
 
 Sub principal()
-    Dim suma As Long
+    Dim suma As Double 
+    Dim total As Double 
     Dim TermSig As Long
     Dim n As Double
     
     suma = 0
     For n = 7 To 1000 Step 1
-        TermSig = (n ^ 2.1) * 3 / n
+        TermSig = (((n) ^ (2)) * 3 / n
         suma = suma + TermSig
     Next n
     
