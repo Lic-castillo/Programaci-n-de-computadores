@@ -13,6 +13,7 @@ Sub principal()
     
     MsgBox "El total es: " & suma
 End Sub
+
 Sub secundario()
     Dim suma As Long
     Dim TermSig As Long
@@ -20,6 +21,9 @@ Sub secundario()
     
     suma = 0
     For n = 0 To 100 Step 1
-        TermSig = n
+        TermSig = (n ^ 2) * 3 / n
         suma = suma + TermSig
     Next n
+    
+    MsgBox "El total de la suma es: " & suma
+End Sub
