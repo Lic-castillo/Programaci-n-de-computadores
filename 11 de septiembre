@@ -1,0 +1,25 @@
+Sub principal()
+
+    Dim x As Long
+
+    
+    x = InputBox("Defina el valor de x")
+    
+ 
+    
+    MsgBox ("La sumatoria es:") & sumita(x)
+End Sub
+
+Function sumita(x)
+    Dim suma As Double
+    Dim TermSig As Double
+    Dim n As Long
+    
+    suma = 0
+    For n = 0 To 15 Step 1
+        TermSig = (-1) ^ (n + 1) * ((x) ^ (2 * n)) / (n + 2)
+        suma = suma + TermSig
+    Next n
+        
+    sumita = suma
+End Function
