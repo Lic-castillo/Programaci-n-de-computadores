@@ -32,9 +32,9 @@ Sub secundario()
     
 
     
-    MsgBox ("seno es igual a ") & sumita(x)
+    MsgBox ("seno es igual a ") & seno(x)
 End Sub
-Function sumita(x)
+Function seno(x)
     Dim n As Long
     Dim suma As Double
     Dim TermSig As Double
@@ -47,5 +47,5 @@ Function sumita(x)
         suma = suma + TermSig
     Next n
     
-    sumita = suma
+    seno = suma
 End Function
