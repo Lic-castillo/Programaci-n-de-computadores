@@ -1,0 +1,33 @@
+Option Explicit
+
+Sub secundario()
+    Dim x As Double
+    
+    x = InputBox("defina x ")
+    
+    MsgBox ("seno es igual a ") & seno(x)
+End Sub
+
+Function seno(x)
+    Dim n As Long
+    Dim suma As Double
+    Dim TermSig As Double
+    Dim Delta As Double
+    
+    '..........................
+    Delta = 0.00000001
+    TermSig = Delta + 1
+    
+    suma = 0
+    n = 0
+    While (Abs(TermSig) >= Delta)
+        TermSig = (-1) ^ (n) * (x) ^ (2 * n + 1) / factorial(2 * n + 1)
+        suma = suma + TermSig
+        
+        n = n + 1
+    Wend
+
+    '.........................
+    
+    seno = suma
+End Function
