@@ -1,0 +1,28 @@
+Option Explicit
+Sub sumaa()
+    Dim x As Double
+    
+    x = InputBox("Inserte el valor de x")
+    
+    MsgBox "El valor de la sumatoria es " & sumatoria(x)
+End Sub
+
+Function sumatoria(x)
+    Dim n As Long
+    Dim TermSig As Double
+    Dim suma As Double
+    Dim delta As Double
+    
+    delta = 0.000000000001
+    
+    suma = 0
+    n = 1
+continue1:
+        TermSig = (-1) ^ (n + 1) * (x - 1) ^ (n) / (n)
+        suma = suma + TermSig
+        
+        n = n + 1
+    If (Abs(TermSig) >= delta) Then GoTo continue1
+  
+    sumatoria = suma
+End Function
