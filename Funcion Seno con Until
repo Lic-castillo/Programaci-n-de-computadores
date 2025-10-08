@@ -1,7 +1,6 @@
 Option Explicit
-
 Sub secundario()
-    Dim x As Long
+    Dim x As double
     
     x = InputBox("defina x ")
     
@@ -12,16 +11,15 @@ Function seno(x)
     Dim n As Long
     Dim suma As Double
     Dim TermSig As Double
-    '..........................
+
     suma = 0
     n = 0
     Do
         TermSig = (-1) ^ (n) * (x) ^ (2 * n + 1) / factorial(2 * n + 1)
         suma = suma + TermSig
-    n = n + 1
-    
+
+        n = n + 1
     Loop Until (Abs(TermSig) < 0.00000001)
-    '.........................
     
     seno = suma
 End Function
