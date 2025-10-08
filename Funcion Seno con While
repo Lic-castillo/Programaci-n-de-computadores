@@ -1,5 +1,5 @@
 Option Explicit
-Sub secundario()
+Sub senowhile()
     Dim x As Double
     
     x = InputBox("defina x ")
