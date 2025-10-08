@@ -1,5 +1,4 @@
 Option Explicit
-
 Sub secundario()
     Dim x As Double
     
@@ -14,7 +13,6 @@ Function seno(x)
     Dim TermSig As Double
     Dim Delta As Double
     
-    '..........................
     Delta = 0.00000001
     TermSig = Delta + 1
     
@@ -26,8 +24,6 @@ Function seno(x)
         
         n = n + 1
     Wend
-
-    '.........................
     
     seno = suma
 End Function
