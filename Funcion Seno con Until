@@ -1,5 +1,5 @@
 Option Explicit
-Sub secundario()
+Sub senountil()
     Dim x As double
     
     x = InputBox("defina x ")
