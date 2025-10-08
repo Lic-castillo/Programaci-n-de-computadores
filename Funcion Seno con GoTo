@@ -1,28 +1,29 @@
 Option Explicit
-Sub sumaa()
-    Dim x As Double
+Sub senocongoto()
+    Dim x As Long
     
     x = InputBox("Inserte el valor de x")
     
-    MsgBox "El valor de la sumatoria es " & sumatoria(x)
+    MsgBox "El valor de seno en radianes es " & seno(x)
 End Sub
 
-Function sumatoria(x)
+Function seno(x)
     Dim n As Long
     Dim TermSig As Double
     Dim suma As Double
     Dim delta As Double
     
-    delta = 0.000000000001
+    delta = 0.00000001
     
     suma = 0
-    n = 1
+    n = 0
 continue1:
-        TermSig = (-1) ^ (n + 1) * (x - 1) ^ (n) / (n)
+        TermSig = (-1) ^ (n) * (x) ^ (2 * n + 1) / factorial(2 * n + 1)
         suma = suma + TermSig
         
         n = n + 1
     If (Abs(TermSig) >= delta) Then GoTo continue1
-  
-    sumatoria = suma
+    
+    seno = suma
 End Function
+
