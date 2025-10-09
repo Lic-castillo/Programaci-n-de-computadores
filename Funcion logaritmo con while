@@ -1,0 +1,33 @@
+Option Explicit
+Sub LogaritmoWhile()
+    Dim x As Double
+    
+    x = InputBox("x")
+    
+    If (x > 2) Then
+        MsgBox -logn(1 / x)
+    Else
+        MsgBox logn(x)
+    End If
+End Sub
+
+Function logn(x)
+    Dim n As Long
+    Dim TermSig As Double
+    Dim suma As Double
+    Dim delta As Double
+    
+    delta = 0.00000001
+    TermSig = delta + 1
+    
+    suma = 0
+    n = 1
+    While (Abs(TermSig) >= delta)
+        TermSig = (-1) ^ (n + 1) * (x - 1) ^ (n) / (n)
+        suma = suma + TermSig
+        
+        n = n + 1
+    Wend
+    
+    logn = suma
+End Function
