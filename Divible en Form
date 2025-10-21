@@ -1,0 +1,20 @@
+    Dim n As Long
+    Dim m As Long
+    Dim a As Double
+    
+    n = InputBox("n")
+    
+    a = 0
+    
+    Cout1.Clear
+    
+    For m = 2 To n - 1
+        If (Int(n / m) * m = n) Then
+            Cout1.AddItem n & " es multiplo de " & m
+            a = a + 1
+        End If
+    Next m
+        
+        If (a = 0) Then
+            Cout1.AddItem n & " es un número primo"
+        End If
