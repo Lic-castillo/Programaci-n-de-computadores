@@ -1,0 +1,18 @@
+    Dim n As Long
+    Dim m As Long
+    Dim primo As Boolean
+    
+    Cout1.Clear
+    
+    For n = 2 To 1000
+    primo = True
+        For m = 2 To n - 1
+            If (Int(n / m) * m = n) Then
+                primo = False
+            End If
+        Next m
+            
+            If (primo = True) Then
+                Cout1.AddItem n & " es primo"
+            End If
+    Next n
