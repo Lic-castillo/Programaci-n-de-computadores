@@ -1,0 +1,131 @@
+Option Explicit
+
+Sub princ()
+    Dim n1 As Long
+    Dim n2 As Long
+    Dim n3 As Long
+    Dim n4 As Long
+    Dim n5 As Long
+    Dim n6 As Long
+    Dim n7 As Long
+    Dim n8 As Long
+    Dim n9 As Long
+    Dim n10 As Long
+    Dim n11 As Long
+    Dim n12 As Long
+    Dim n13 As Long
+    Dim n14 As Long
+    Dim n15 As Long
+    Dim all1 As Double
+    Dim all2 As Double
+    Dim all3 As Double
+    Dim all4 As Double
+    Dim all5 As Double
+    Dim all6 As Double
+    Dim all7 As Double
+    Dim all8 As Double
+    Dim all9 As Double
+    Dim all10 As Double
+    Dim all11 As Double
+    Dim all12 As Double
+    Dim all13 As Double
+    Dim all14 As Double
+    Dim all15 As Double
+   
+   
+    Worksheets("Hoja1").Select
+    n1 = Cells(1, 1)
+    n2 = Cells(2, 1)
+    n3 = Cells(3, 1)
+    n4 = Cells(4, 1)
+    n5 = Cells(5, 1)
+    n6 = Cells(6, 1)
+    n7 = Cells(7, 1)
+    n8 = Cells(8, 1)
+    n9 = Cells(9, 1)
+    n10 = Cells(10, 1)
+    n11 = Cells(11, 1)
+    n12 = Cells(12, 1)
+    n13 = Cells(13, 1)
+    n14 = Cells(14, 1)
+    n15 = Cells(15, 1)
+   
+    all1 = (n2 + n3 + n4 + n5 + n6 + n7 + n8 + n9 + n10 + n11 + n12 + n13 + n14 + n15) / 14
+    all2 = (n1 + n3 + n4 + n5 + n6 + n7 + n8 + n9 + n10 + n11 + n12 + n13 + n14 + n15) / 14
+    all3 = (n1 + n2 + n4 + n5 + n6 + n7 + n8 + n9 + n10 + n11 + n12 + n13 + n14 + n15) / 14
+    all4 = (n1 + n2 + n3 + n5 + n6 + n7 + n8 + n9 + n10 + n11 + n12 + n13 + n14 + n15) / 14
+    all5 = (n1 + n3 + n4 + n2 + n6 + n7 + n8 + n9 + n10 + n11 + n12 + n13 + n14 + n15) / 14
+    all6 = (n1 + n3 + n4 + n5 + n2 + n7 + n8 + n9 + n10 + n11 + n12 + n13 + n14 + n15) / 14
+    all7 = (n1 + n3 + n4 + n5 + n6 + n2 + n8 + n9 + n10 + n11 + n12 + n13 + n14 + n15) / 14
+    all8 = (n1 + n3 + n4 + n5 + n6 + n7 + n2 + n9 + n10 + n11 + n12 + n13 + n14 + n15) / 14
+    all9 = (n1 + n3 + n4 + n5 + n6 + n7 + n8 + n2 + n10 + n11 + n12 + n13 + n14 + n15) / 14
+    all10 = (n1 + n3 + n4 + n5 + n6 + n7 + n8 + n9 + n2 + n11 + n12 + n13 + n14 + n15) / 14
+    all11 = (n1 + n3 + n4 + n5 + n6 + n7 + n8 + n9 + n10 + n2 + n12 + n13 + n14 + n15) / 14
+    all12 = (n1 + n3 + n4 + n5 + n6 + n7 + n8 + n9 + n10 + n11 + n2 + n13 + n14 + n15) / 14
+    all13 = (n1 + n3 + n4 + n5 + n6 + n7 + n8 + n9 + n10 + n11 + n12 + n2 + n14 + n15) / 14
+    all14 = (n1 + n3 + n4 + n5 + n6 + n7 + n8 + n9 + n10 + n11 + n12 + n13 + n2 + n15) / 14
+    all15 = (n1 + n3 + n4 + n5 + n6 + n7 + n8 + n9 + n10 + n11 + n12 + n13 + n14 + n2) / 14
+   
+   
+   
+    If (n1 > all1) Then
+        MsgBox ("el mayor es " & n1 & ", está en la posición 1")
+    Else
+        If (n2 > all2) Then
+            MsgBox ("el mayor es " & n2 & ", está en la posición 2")
+        Else
+            If (n3 > all3) Then
+                MsgBox ("el mayor es " & n3 & ", está en la posición 3")
+            Else
+                If (n4 > all4) Then
+                    MsgBox ("el mayor es " & n4 & ", está en la posición 4")
+                Else
+                    If (n5 > all5) Then
+                        MsgBox ("el mayor es " & n5 & ", está en la posición 5")
+                    Else
+                    If (n6 > all6) Then
+                        MsgBox ("el mayor es " & n6 & ", está en la posición 6")
+                    Else
+                        If (n7 > all7) Then
+                            MsgBox ("el mayor es " & n7 & ", está en la posición 7")
+                        Else
+                            If (n8 > all8) Then
+                                MsgBox ("el mayor es " & n8 & ", está en la posición 8")
+                            Else
+                                If (n9 > all9) Then
+                                    MsgBox ("el mayor es " & n9 & ", está en la posición 9")
+                                Else
+                                    If (n10 > all10) Then
+                                        MsgBox ("el mayor es " & n10 & ", está en la posición 10")
+                                    Else
+                                        If (n11 > all11) Then
+                                            MsgBox ("el mayor es " & n11 & ", está en la posición 11")
+                                        Else
+                                            If (n12 > all12) Then
+                                                MsgBox ("el mayor es " & n12 & ", está en la posición 12")
+                                                Else
+                                                    If (n13 > all13) Then
+                                                        MsgBox ("el mayor es " & n13 & ", está en la posición 13")
+                                                    Else
+                                                        If (n14 > all14) Then
+                                                            MsgBox ("el mayor es " & n14 & ", está en la posición 14")
+                                                        Else
+                                                            If (n15 > all15) Then
+                                                                MsgBox ("el mayor es " & n15 & ", está en la posición 15")
+                                                            End If
+                                                        End If
+                                                    End If
+                                                End If
+                                            End If
+                                        End If
+                                    End If
+                                End If
+                            End If
+                        End If
+                    End If
+                End If
+            End If
+        End If
+    End If
+End Sub
+
