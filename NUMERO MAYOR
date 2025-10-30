@@ -1,0 +1,86 @@
+Option Explicit
+Sub main2()
+          Dim n1 As Double
+          Dim n2 As Double
+          Dim n3 As Double
+          Dim n4 As Double
+          Dim n5 As Double
+          Dim n6 As Double
+          Dim n7 As Double
+          Dim n8 As Double
+          Dim n9 As Double
+          Dim n10 As Double
+          Dim n11 As Double
+          Dim n12 As Double
+          Dim n13 As Double
+          Dim n14 As Double
+          Dim n15 As Double
+            
+          Worksheets("hoja1").Select
+          n1 = Cells(1, 1)
+          n2 = Cells(2, 1)
+          n3 = Cells(3, 1)
+          n4 = Cells(4, 1)
+          n5 = Cells(5, 1)
+          
+          If (n1 > n2) And (n1 > n3) And (n1 > n4) And (n1 > n5) And (n1 > n6) And (n1 > n7) And (n1 > n8) And (n1 > n9) And (n1 > n10) And (n1 > n11) And (n1 > n12) And (n1 > n13) And (n1 > n14) And (n1 > n15) Then
+                    MsgBox (n1 & ", el primer número,  es el mayor de todos")
+          End If
+          
+          If (n2 > n1) And (n2 > n3) And (n2 > n4) And (n2 > n5) And (n2 > n6) And (n2 > n7) And (n2 > n8) And (n2 > n9) And (n2 > n10) And (n2 > n11) And (n2 > n12) And (n2 > n13) And (n2 > n14) And (n2 > n15) Then
+                    MsgBox (n2 & ", el segundo número, es el mayor de todos")
+          End If
+          
+          If (n3 > n1) And (n3 > n2) And (n3 > n4) And (n3 > n5) And (n3 > n6) And (n3 > n7) And (n3 > n8) And (n3 > n9) And (n3 > n10) And (n3 > n11) And (n3 > n12) And (n3 > n13) And (n3 > n14) And (n3 > n15) Then
+                    MsgBox (n3 & ", el tercer número, es el mayor de todos")
+          End If
+          
+          If (n4 > n1) And (n4 > n2) And (n4 > n3) And (n4 > n5) And (n4 > n6) And (n4 > n7) And (n4 > n8) And (n4 > n9) And (n4 > n10) And (n4 > n11) And (n4 > n12) And (n4 > n13) And (n4 > n14) And (n4 > n15) Then
+                    MsgBox (n4 & ", el cuarto número, es el mayor de todos")
+          End If
+          
+          If (n5 > n1) And (n5 > n2) And (n5 > n3) And (n5 > n4) And (n5 > n6) And (n5 > n7) And (n5 > n8) And (n5 > n9) And (n5 > n10) And (n5 > n11) And (n5 > n12) And (n5 > n13) And (n5 > n14) And (n5 > n15) Then
+                    MsgBox (n5 & ", el quinto número, es el mayor de todos")
+          End If
+          
+          If (n6 > n2) And (n6 > n3) And (n6 > n4) And (n6 > n5) And (n6 > n1) And (n6 > n7) And (n6 > n8) And (n6 > n9) And (n6 > n10) And (n6 > n11) And (n6 > n12) And (n6 > n13) And (n6 > n14) And (n6 > n15) Then
+                    MsgBox (n6 & ", el sexto número,  es el mayor de todos")
+          End If
+          
+          If (n7 > n1) And (n7 > n3) And (n7 > n4) And (n7 > n5) And (n7 > n6) And (n7 > n2) And (n7 > n8) And (n7 > n9) And (n7 > n10) And (n7 > n11) And (n7 > n12) And (n7 > n13) And (n7 > n14) And (n7 > n15) Then
+                    MsgBox (n7 & ", el séptimo número, es el mayor de todos")
+          End If
+          
+          If (n8 > n1) And (n8 > n2) And (n8 > n4) And (n8 > n5) And (n8 > n6) And (n8 > n7) And (n8 > n3) And (n8 > n9) And (n8 > n10) And (n8 > n11) And (n8 > n12) And (n8 > n13) And (n8 > n14) And (n8 > n15) Then
+                    MsgBox (n8 & ", el octavo número, es el mayor de todos")
+          End If
+          
+          If (n9 > n1) And (n9 > n2) And (n9 > n3) And (n9 > n5) And (n9 > n6) And (n9 > n7) And (n9 > n8) And (n9 > n4) And (n9 > n10) And (n9 > n11) And (n9 > n12) And (n9 > n13) And (n9 > n14) And (n9 > n15) Then
+                    MsgBox (n9 & ", el noveno número, es el mayor de todos")
+          End If
+          
+          If (n10 > n1) And (n10 > n2) And (n10 > n3) And (n10 > n4) And (n10 > n6) And (n10 > n7) And (n10 > n8) And (n10 > n9) And (n10 > n5) And (n10 > n11) And (n10 > n12) And (n10 > n13) And (n10 > n14) And (n10 > n15) Then
+                    MsgBox (n10 & ", el décimo número, es el mayor de todos")
+          End If
+          
+          If (n11 > n2) And (n11 > n3) And (n11 > n4) And (n11 > n5) And (n11 > n1) And (n11 > n7) And (n11 > n8) And (n11 > n9) And (n11 > n10) And (n11 > n6) And (n11 > n12) And (n11 > n13) And (n11 > n14) And (n11 > n15) Then
+                    MsgBox (n11 & ", el décimoprimer número,  es el mayor de todos")
+          End If
+          
+          If (n12 > n1) And (n12 > n3) And (n12 > n4) And (n12 > n5) And (n12 > n6) And (n12 > n2) And (n12 > n8) And (n12 > n9) And (n12 > n10) And (n12 > n11) And (n12 > n7) And (n12 > n13) And (n12 > n14) And (n12 > n15) Then
+                    MsgBox (n12 & ", el décimosegundo número, es el mayor de todos")
+          End If
+          
+          If (n13 > n1) And (n13 > n2) And (n13 > n4) And (n13 > n5) And (n13 > n6) And (n13 > n7) And (n13 > n3) And (n13 > n9) And (n13 > n10) And (n13 > n11) And (n13 > n12) And (n13 > n8) And (n13 > n14) And (n13 > n15) Then
+                    MsgBox (n13 & ", el décimotercer número, es el mayor de todos")
+          End If
+          
+          If (n14 > n1) And (n14 > n2) And (n14 > n3) And (n14 > n5) And (n14 > n6) And (n14 > n7) And (n14 > n8) And (n14 > n4) And (n14 > n10) And (n14 > n11) And (n14 > n12) And (n14 > n13) And (n14 > n9) And (n14 > n15) Then
+                    MsgBox (n14 & ", el décimocuarto número, es el mayor de todos")
+          End If
+          
+          If (n15 > n1) And (n15 > n2) And (n15 > n3) And (n15 > n4) And (n15 > n6) And (n15 > n7) And (n15 > n8) And (n15 > n9) And (n15 > n5) And (n15 > n11) And (n15 > n12) And (n15 > n13) And (n15 > n14) And (n15 > n10) Then
+                    MsgBox (n15 & ", el décimoquinto número, es el mayor de todos")
+          End If
+          
+End Sub
