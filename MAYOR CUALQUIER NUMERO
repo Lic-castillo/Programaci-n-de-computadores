@@ -1,0 +1,32 @@
+Option Explicit
+Sub principal()
+    Dim i As Long
+    Dim k As Long
+    Dim posición As Long
+    Dim n(100) As Double
+    Dim mayor As Double
+    
+    k = InputBox("k")
+    
+    Worksheets("hoja1").Select
+        For i = 1 To 15
+            n(i) = Cells(i, 1)
+        Next i
+        
+    Worksheets("hoja2").Select
+        For i = 1 To 15
+            n(i) = Cells(i, 1)
+        Next i
+        
+    mayor = n(k)
+    For i = k To 15
+        If n(i) > mayor Then
+            mayor = n(i)
+            posición = i
+        End If
+    Next i
+    
+    MsgBox "El mayor es " & mayor & " y su posición es " & posición
+        
+End Sub
+    
