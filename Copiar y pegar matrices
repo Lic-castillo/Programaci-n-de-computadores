@@ -1,0 +1,36 @@
+Option Explicit
+Sub main()
+    Dim n() As Long
+    Dim i As Long
+    Dim filas As Long
+    Dim j As Long
+    Dim colms As Long
+    
+    Worksheets("Hoja1").Select
+        i = 1
+        While (Cells(i, 1) <> "")
+            i = i + 1
+        Wend
+        filas = i - 1
+        
+        j = 1
+        While Cells(1, j) <> ""
+            j = j + 1
+        Wend
+        colms = j - 1
+        
+        ReDim n(i, j)
+        
+        For i = 1 To filas
+            For j = 1 To colms
+                n(i, j) = Cells(i, j)
+            Next j
+        Next i
+        
+        Worksheets("Hoja2").Select
+        For i = 1 To filas
+            For j = 1 To colms
+                Cells(i, j) = n(i, j)
+            Next j
+        Next i
+End Sub
