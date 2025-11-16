@@ -1,0 +1,22 @@
+Option Explicit
+Sub principal()
+    Dim m As Long
+
+    m = InputBox("m")
+    
+    MsgBox factorial(m) 
+End Sub
+    
+Function factorial(m)
+    Dim n As Long
+    Dim TermSig As Double
+    Dim producto As Double
+      
+    producto = 1
+    For n = 1 To m
+        TermSig = n
+        producto = producto * TermSig
+    Next n
+    
+    factorial = producto
+End Function
