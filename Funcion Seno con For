@@ -1,32 +1,10 @@
-Option Explicit
-Sub principal()
-    Dim m As Long
-
-    m = InputBox("m")
-    
-    MsgBox ("El resultado es ") & factorial(m) 
-End Sub
-    
-Function factorial(m)
-    Dim n As Long
-    Dim TermSig As Double
-    Dim producto As Double
-      
-    producto = 1
-    For n = 1 To m Step 1
-        TermSig = n
-        producto = producto * TermSig
-    Next n
-    
-    factorial = producto
-End Function
-
+Option explicit 
 Sub senofor()
     Dim x as double
     
-    x = InputBox("defina x ")
+    x = InputBox("x")
     
-    MsgBox ("seno es igual a ") & seno(x)
+    MsgBox seno(x)
 End Sub
 
 Function seno(x)
@@ -35,7 +13,7 @@ Function seno(x)
     Dim TermSig As Double
 
     suma = 0
-    For n = 0 To 14 Step 1
+    For n = 0 To 14
         TermSig = (-1) ^ (n) * (x) ^ (2 * n + 1) / factorial(2 * n + 1)
         suma = suma + TermSig
     Next n
