@@ -1,10 +1,13 @@
     Dim n As Long
     Dim m As Long
+    Dim k As Long
     Dim primo As Boolean
     
     Cout1.Clear
     
-    For n = 2 To 1000
+    k = InputBox("k")
+    
+    For n = 2 To k
     primo = True
         For m = 2 To n - 1
             If (Int(n / m) * m = n) Then
