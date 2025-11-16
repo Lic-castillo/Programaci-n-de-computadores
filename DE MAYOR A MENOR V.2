@@ -1,0 +1,46 @@
+Option Explicit
+Sub org()
+    Dim i As Long
+    Dim k As Long
+    Dim pos As Long
+    Dim n() As Double
+    Dim may As Double
+    Dim fil As Double
+    Dim aux As Double
+    
+    Worksheets("Hoja1").Select
+    
+    i = 1
+    While (Cells(i, 1) <> "")
+        i = i + 1
+    Wend
+    fil = i - 1
+    
+    ReDim n(fil)
+    
+    For i = 1 To fil
+        n(i) = Cells(i, 1)
+    Next i
+    
+    For k = 1 To fil
+        may = n(k)
+        pos = k
+        For i = k To fil
+            If n(i) < may Then
+                may = n(i)
+                pos = i
+            End If
+        Next i
+        
+        aux = n(k)
+        n(k) = n(pos)
+        n(pos) = aux
+    Next k
+    
+    Worksheets("Hoja2").Select
+    For i = 1 To fil
+        Cells(i, 1) = n(i)
+    Next i
+    
+    MsgBox may & " es el mayor y su posición es " & pos
+End Sub
