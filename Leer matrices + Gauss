@@ -14,8 +14,8 @@ Sub matriz()
     p = InputBox("p")
     
     Call leerm("hoja1", fil, col, A)
-    Call poncer(A, fil, col)
     Call escrm("hoja2", fil, col, A)
+    Call poncer(A, fil, col)
 End Sub
 
 Sub leerm(archivo, fil, col, A)
