@@ -1,0 +1,79 @@
+Option Explicit
+
+Sub matriz()
+    Dim i As Long
+    Dim j As Long
+    Dim p As Long
+    Dim k As Long
+    Dim fil As Long
+    Dim col As Long
+    Dim aux As Double
+    Dim A() As Double
+    
+    k = InputBox("k")
+    p = InputBox("p")
+    
+    Call leerm("hoja1", fil, col, A)
+    Call poncer(A, fil, col)
+    Call escrm("hoja2", fil, col, A)
+End Sub
+
+Sub leerm(archivo, fil, col, A)
+    Dim i As Long
+    Dim j As Long
+    
+    Worksheets(archivo).Select
+    
+    i = 1
+    While (Cells(i, 1) <> "")
+        i = i + 1
+    Wend
+    fil = i - 1
+    
+    j = 1
+    While (Cells(1, j) <> "")
+        j = j + 1
+    Wend
+    col = j - 1
+
+    ReDim A(fil, col)
+    
+    For i = 1 To fil
+        For j = 1 To col
+            A(i, j) = Cells(i, j)
+        Next j
+    Next i
+
+End Sub
+
+Sub escrm(archivo, fil, col, A)
+    Dim i As Long
+    Dim j As Long
+
+    Worksheets(archivo).Select
+    
+    For i = 1 To fil
+        For j = 1 To col
+            Cells(i, j) = A(i, j)
+        Next j
+    Next i
+
+End Sub
+
+Sub poncer(A, fil, col)
+    Dim j As Long
+    Dim p As Long
+    Dim k As Long
+    Dim aux As Double
+    
+    For p = 1 To fil
+        For k = 1 To fil
+            If (k <> p) Then
+                aux = A(k, p)
+                For j = 1 To col
+                    A(k, j) = A(p, j) / A(p, p) * aux - A(k, j)
+                Next j
+            End If
+        Next k
+    Next p
+End Sub
