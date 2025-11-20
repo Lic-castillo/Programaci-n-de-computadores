@@ -1,21 +1,15 @@
 Option Explicit
 
 Sub matriz()
-    Dim i As Long
-    Dim j As Long
     Dim p As Long
     Dim k As Long
     Dim fil As Long
     Dim col As Long
-    Dim aux As Double
     Dim A() As Double
-    
-    k = InputBox("k")
-    p = InputBox("p")
-    
+
     Call leerm("hoja1", fil, col, A)
-    Call escrm("hoja2", fil, col, A)
     Call poncer(A, fil, col)
+    Call escrm("hoja2", fil, col, A)
 End Sub
 
 Sub leerm(archivo, fil, col, A)
@@ -57,7 +51,6 @@ Sub escrm(archivo, fil, col, A)
             Cells(i, j) = A(i, j)
         Next j
     Next i
-
 End Sub
 
 Sub poncer(A, fil, col)
