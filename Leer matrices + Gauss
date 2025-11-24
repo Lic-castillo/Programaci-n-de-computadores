@@ -1,18 +1,18 @@
 Option Explicit
-
 Sub matriz()
-    Dim p As Long
-    Dim k As Long
+    Dim a() As Double
     Dim fil As Long
     Dim col As Long
-    Dim A() As Double
-
-    Call leerm("hoja1", fil, col, A)
-    Call poncer(A, fil, col)
-    Call escrm("hoja2", fil, col, A)
+    
+    Call leerm("Hoja1", a, fil, col)
+    Call poncerm(a, fil, col)
+    Call ponunom(a, fil, col)
+    Call escrm("Hoja2", a, fil, col)
+    
+    MsgBox "El determinante es " & determ(a, fil)
 End Sub
 
-Sub leerm(archivo, fil, col, A)
+Sub leerm(archivo, a, fil, col)
     Dim i As Long
     Dim j As Long
     
@@ -23,50 +23,77 @@ Sub leerm(archivo, fil, col, A)
         i = i + 1
     Wend
     fil = i - 1
-    
+
     j = 1
     While (Cells(1, j) <> "")
         j = j + 1
     Wend
     col = j - 1
-
-    ReDim A(fil, col)
+    
+    ReDim a(fil, col)
     
     For i = 1 To fil
         For j = 1 To col
-            A(i, j) = Cells(i, j)
+            a(i, j) = Cells(i, j)
         Next j
     Next i
-
 End Sub
 
-Sub escrm(archivo, fil, col, A)
+Sub escrm(archivo, a, fil, col)
     Dim i As Long
     Dim j As Long
-
+    
     Worksheets(archivo).Select
     
     For i = 1 To fil
         For j = 1 To col
-            Cells(i, j) = A(i, j)
+            Cells(i, j) = a(i, j)
         Next j
     Next i
 End Sub
 
-Sub poncer(A, fil, col)
+Sub poncerm(a, fil, col)
     Dim j As Long
-    Dim p As Long
     Dim k As Long
+    Dim p As Long
     Dim aux As Double
     
     For p = 1 To fil
         For k = 1 To fil
             If (k <> p) Then
-                aux = A(k, p)
+                aux = a(k, p)
                 For j = 1 To col
-                    A(k, j) = A(p, j) / A(p, p) * aux - A(k, j)
+                    a(k, j) = a(p, j) / a(p, p) * aux - a(k, j)
                 Next j
             End If
         Next k
     Next p
 End Sub
+
+Sub ponunom(a, fil, col)
+    Dim p As Long
+    Dim j As Long
+    Dim aux As Double
+    
+    For p = 1 To fil
+        aux = a(p, p)
+        For j = 1 To col
+            a(p, j) = a(p, j) / a(p, p)
+        Next j
+    Next p
+End Sub
+
+Function determ(a, fil)
+    Dim p As Long
+    Dim TermSig As Double
+    Dim mult As Double
+    
+    mult = 1
+    For p = 1 To fil
+        TermSig = a(p, p)
+        mult = mult * TermSig
+    Next p
+    
+    determ = mult
+End Function
+
