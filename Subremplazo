@@ -1,0 +1,16 @@
+Option Explicit
+Sub remplazo()
+    Dim j As Long
+    Dim m As Long
+    Dim i As Long
+    
+    m = InputBox("m")
+    
+    For i = 1 To (Int(m / 7) + 1)
+        For j = 1 To 7
+            If (j + (1 - 1) * 7 < m) Then
+                Cells(i, j) = j + (i - 1) * 7
+            End If
+        Next j
+    Next i
+End Sub
