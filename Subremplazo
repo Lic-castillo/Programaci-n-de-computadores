@@ -1,15 +1,28 @@
 Option Explicit
-Sub remplazo()
-    Dim j As Long
+Sub main()
     Dim m As Long
+    Dim k As Long
+    Dim col As Long
+
+    k = InputBox("Hasta que numero?")
+    m = InputBox("En filas de cuanto?")
+    col = InputBox("Desde que columna?")
+    
+    Call remplazar("Hoja5", k, m, col)
+End Sub
+    
+Sub remplazar(archivo, k, m, col)
     Dim i As Long
+    Dim j As Long
     
-    m = InputBox("m")
-    
-    For i = 1 To (Int(m / 7) + 1)
-        For j = 1 To 7
-            If (j + (1 - 1) * 7 < m) Then
-                Cells(i, j) = j + (i - 1) * 7
+    Worksheets(archivo).Select
+     
+    For i = 1 To Int(k / m) + 2
+        For j = 1 To m
+            If j + i * m - m >= col Then
+                If (j + i * m - m - col + 1 <= k) Then
+                    Cells(i, j) = j + i * m - m - col + 1
+                End If
             End If
         Next j
     Next i
