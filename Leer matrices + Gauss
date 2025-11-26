@@ -4,12 +4,11 @@ Sub matriz()
     Dim fil As Long
     Dim col As Long
     
-    Call leerm("Hoja1", a, fil, col)
+    Call leerm("Hoja3", a, fil, col)
     Call poncerm(a, fil, col)
-    Call ponunom(a, fil, col)
-    Call escrm("Hoja2", a, fil, col)
-    
     MsgBox "El determinante es " & determ(a, fil)
+    Call ponunom(a, fil, col)
+    Call escrm("Hoja4", a, fil, col)
 End Sub
 
 Sub leerm(archivo, a, fil, col)
@@ -96,4 +95,3 @@ Function determ(a, fil)
     
     determ = mult
 End Function
-
