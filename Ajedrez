@@ -1,29 +1,31 @@
 Option Explicit
-
-Sub main()
-Dim j As Long
-Dim i As Long
-
+Sub main8()
+    Dim i As Long
+    Dim j As Long
+   
+    Worksheets("Hoja6").Select
+   
     For j = 1 To 8 Step 1
-        If (Int(j / 2) * 2 - j) Then
-            For i = 1 To 8 Step 2
-                Cells(i, j).Interior.Color = RGB(100 + 50, 75 + 50, 50 + 50)
+        If (Int(j / 2) * 2 = j) Then
+            For i = 2 To 8 Step 2
+                Cells(i, j).Interior.Color = RGB(150, 125, 100)
             Next i
         Else
             For i = 1 To 8 Step 2
-                Cells(i, j).Interior.Color = RGB(100 + 50, 75 + 50, 50 + 50)
+                Cells(i, j).Interior.Color = RGB(150, 125, 100)
             Next i
         End If
     Next j
-    
+   
     For j = 1 To 8 Step 1
-        If (Int(j / 2) * 2 - j) Then
-            For i = 2 To 8 Step 2
-                Cells(i, j).Interior.Color = RGB(220, 220, 220)
+        If (Int(j / 2) * 2 = j) Then
+            For i = 1 To 8 Step 2
+                Cells(i, j).Interior.Color = RGB(230, 230, 220)
             Next i
         Else
             For i = 2 To 8 Step 2
-                Cells(i, j).Interior.Color = RGB(220, 220, 220)
+                Cells(i, j).Interior.Color = RGB(230, 230, 220)
             Next i
         End If
     Next j
+End Sub
