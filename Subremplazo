@@ -1,29 +1,46 @@
 Option Explicit
-Sub main()
-    Dim m As Long
-    Dim k As Long
-    Dim col As Long
 
-    k = InputBox("Hasta que numero?")
-    m = InputBox("En filas de cuanto?")
-    col = InputBox("Desde que columna?")
+Sub escnums()
+
+    Dim m As Long
+    Dim col As Long
+    Dim fil As Long
     
-    Call remplazar("Hoja5", k, m, col)
+    m = InputBox("m")
+    col = InputBox("desde qué columna")
+    fil = InputBox("desde qué fila")
+
+    Call ponnums("hoja1", m, fil, col)
+
 End Sub
-    
-Sub remplazar(archivo, k, m, col)
-    Dim i As Long
-    Dim j As Long
+
+Sub ponnums(archivo, m, fil, col)
+
+    Dim i As long
+    Dim j As long
+    Dim k As long
+    Dim p As long
     
     Worksheets(archivo).Select
-     
-    For i = 1 To Int(k / m) + 2
-        For j = 1 To m
-            If j + i * m - m >= col Then
-                If (j + i * m - m - col + 1 <= k) Then
-                    Cells(i, j) = j + i * m - m - col + 1
-                End If
+    
+    p = (Int(m / 7))
+    k = 1
+    
+    For j = cols To 7
+        Cells(fil, j) = k
+        k = k + 1
+    Next j
+    
+    fil = fil + 1
+    
+    For i = fil To fil + p
+        For j = 1 To 7
+            If (k <= m) Then
+                Cells(i, j) = k
             End If
+            k = k + 1
         Next j
     Next i
 End Sub
+
+
