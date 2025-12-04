@@ -1,18 +1,58 @@
 Option Explicit
-Sub main8()
+Sub ajedrez()
+    Dim i0 As Long
+    Dim j0 As Long
+    Dim i1 As Long
+    Dim j1 As Long
+    Dim a As Boolean
+    Dim b As Boolean
+    Dim c As Boolean
+    Dim d As Boolean
+   
+    Call colorear("Hoja1")
+   
+    i0 = InputBox("i0")
+    j0 = InputBox("j0")
+    i1 = InputBox("i1")
+    j1 = InputBox("j1")
+   
+    a = i0 >= 1 And i0 <= 8
+    b = j0 >= 1 And j0 <= 8
+    c = i1 >= 1 And i1 <= 8
+    d = j1 >= 1 And j1 <= 8
+   
+    If (a And b And c And d) Then
+   
+    Else
+        MsgBox ("fuera del tablero")
+    End If
+   
+    If (Abs(i1 - i0) = 2 And Abs(j1 - j0) = 1) Then
+   
+    Else
+        If (Abs(i1 - i0) = 1 And Abs(j1 - j0) = 2) Then
+       
+        Else
+            MsgBox ("Salto no válido.")
+        End If
+    End If
+           
+       
+End Sub
+
+Sub colorear(archivo)
     Dim i As Long
     Dim j As Long
    
-    Worksheets("Hoja6").Select
-   
+    Worksheets(archivo).Select
     For j = 1 To 8 Step 1
         If (Int(j / 2) * 2 = j) Then
             For i = 2 To 8 Step 2
-                Cells(i, j).Interior.Color = RGB(150, 125, 100)
+                Cells(i, j).Interior.Color = RGB(100, 100, 100)
             Next i
         Else
             For i = 1 To 8 Step 2
-                Cells(i, j).Interior.Color = RGB(150, 125, 100)
+                Cells(i, j).Interior.Color = RGB(100, 100, 100)
             Next i
         End If
     Next j
@@ -20,11 +60,11 @@ Sub main8()
     For j = 1 To 8 Step 1
         If (Int(j / 2) * 2 = j) Then
             For i = 1 To 8 Step 2
-                Cells(i, j).Interior.Color = RGB(230, 230, 220)
+                Cells(i, j).Interior.Color = RGB(240, 230, 220)
             Next i
         Else
             For i = 2 To 8 Step 2
-                Cells(i, j).Interior.Color = RGB(230, 230, 220)
+                Cells(i, j).Interior.Color = RGB(240, 230, 220)
             Next i
         End If
     Next j
