@@ -1,0 +1,29 @@
+Option Explicit
+
+Sub main()
+Dim n As Long
+
+    n = inputbox("n") 
+    
+    MsgBox invierta_dig(n)
+   
+End Sub
+
+Function invierta_dig(n)
+Dim i As Long
+Dim d(100) As Long
+Dim n_digitos As Long
+Dim n_string As String
+Dim n_invertido As Long
+
+    n_string = CStr(n)
+    n_digitos = Len(n_string)
+    
+    n_invertido = 0
+    For i = 1 To n_digitos
+        d(i) = Mid(n_string, i, 1)
+        n_invertido = n_invertido + d(i) * (10) ^ (i - 1)
+    Next i
+
+    invierta_dig = n_invertido
+End Function
